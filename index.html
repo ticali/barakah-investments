@@ -52,14 +52,15 @@
       text-decoration: none;
     }
     .nav-logo-mark {
-      width: 36px; height: 36px;
+      width: 38px; height: 38px;
       background: var(--green-deep);
       border-radius: 9px;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      color: var(--gold-light);
-      font-size: 17px; font-weight: 700;
-      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+    .nav-logo-tree {
+      width: 24px; height: 30px;
+      display: block;
     }
     .nav-logo-text {
       font-family: 'Playfair Display', serif;
@@ -68,6 +69,19 @@
       line-height: 1.2;
     }
     .nav-logo-text span { display: block; font-size: 10px; font-family: 'Inter', sans-serif; font-weight: 400; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .footer-logo-tree {
+      width: 22px; height: 28px;
+      display: block; flex-shrink: 0;
+    }
+    .footer-logo-wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 600;
+      color: rgba(255,255,255,0.8);
+    }
+    .footer-logo-wordmark span { color: var(--gold-light); }
     .nav-links {
       display: flex; gap: 32px; list-style: none;
     }
@@ -101,15 +115,12 @@
         radial-gradient(circle at 60% 80%, rgba(201,151,58,0.06) 0%, transparent 40%);
       pointer-events: none;
     }
-    /* Subtle geometric motif */
-    .hero-bg-pattern::after {
-      content: '';
-      position: absolute; top: 50%; right: 5%;
+    /* Big Island of Hawaii motif */
+    .hero-island {
+      position: absolute; top: 50%; right: 4%;
       transform: translateY(-50%);
-      width: 420px; height: 420px;
-      border-radius: 50%;
-      border: 1px solid rgba(201,151,58,0.12);
-      box-shadow: 0 0 0 50px rgba(201,151,58,0.04), 0 0 0 100px rgba(201,151,58,0.03);
+      width: 300px; height: 320px;
+      pointer-events: none;
     }
 
     .hero-content { position: relative; max-width: 640px; }
@@ -133,6 +144,14 @@
       margin-bottom: 24px;
     }
     h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px; font-weight: 400; font-style: italic;
+      color: var(--gold-light);
+      letter-spacing: 0.13em;
+      margin-bottom: 22px;
+      opacity: 0.88;
+    }
     .hero-sub {
       font-size: 17px; font-weight: 400;
       color: rgba(255,255,255,0.65);
@@ -251,7 +270,7 @@
     .portfolio { background: var(--cream); }
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
     .biz-card {
@@ -278,6 +297,9 @@
     }
     .biz-card-header-melt {
       background: linear-gradient(135deg, #7B2D00 0%, #D44000 60%, #F4651D 100%);
+    }
+    .biz-card-header-hibachi {
+      background: linear-gradient(135deg, #0D0808 0%, #3D1010 45%, #7A2020 100%);
     }
     .biz-card-header::after {
       content: '';
@@ -450,12 +472,7 @@
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 16px;
     }
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; font-weight: 600;
-      color: rgba(255,255,255,0.8);
-    }
-    .footer-logo span { color: var(--gold-light); }
+    /* .footer-logo styles moved to nav section */
     .footer-copy {
       font-size: 13px; color: rgba(255,255,255,0.35);
     }
@@ -494,7 +511,92 @@
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">
-      <div class="nav-logo-mark">B</div>
+      <div class="nav-logo-mark"><svg class="nav-logo-tree" viewBox="68 80 104 135" width="24" height="30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<!-- Trunk -->
+  <path stroke="#E4B96A" stroke-width="2.4" fill="none" stroke-linecap="round"
+        d="M 120,208 C 120,188 119,165 120,142 C 121,124 120,110 120,98"/>
+  <!-- branches at y=192 -->
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,192 Q 99.8,187.7 75.0,182.4"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="110.2" cy="189.9" rx="5.8" ry="2.3" transform="rotate(-168 110.2 189.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="100.4" cy="187.8" rx="5.4" ry="2.2" transform="rotate(-168 100.4 187.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="90.7" cy="185.8" rx="5.0" ry="2.1" transform="rotate(-168 90.7 185.8)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="80.9" cy="183.7" rx="4.6" ry="2.0" transform="rotate(-168 80.9 183.7)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="75.0" cy="182.4" rx="4.2" ry="1.8" transform="rotate(-168 75.0 182.4)"/>
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,192 Q 140.2,187.7 165.0,182.4"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="129.8" cy="189.9" rx="5.8" ry="2.3" transform="rotate(-12 129.8 189.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="139.6" cy="187.8" rx="5.4" ry="2.2" transform="rotate(-12 139.6 187.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="149.3" cy="185.8" rx="5.0" ry="2.1" transform="rotate(-12 149.3 185.8)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="159.1" cy="183.7" rx="4.6" ry="2.0" transform="rotate(-12 159.1 183.7)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="165.0" cy="182.4" rx="4.2" ry="1.8" transform="rotate(-12 165.0 182.4)"/>
+  <!-- branches at y=175 -->
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,175 Q 102.7,168.7 81.5,161.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="111.6" cy="172.0" rx="5.8" ry="2.3" transform="rotate(-160 111.6 172.0)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="103.2" cy="168.9" rx="5.4" ry="2.2" transform="rotate(-160 103.2 168.9)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="94.9" cy="165.9" rx="5.0" ry="2.1" transform="rotate(-160 94.9 165.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="86.5" cy="162.8" rx="4.6" ry="2.0" transform="rotate(-160 86.5 162.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="81.5" cy="161.0" rx="4.2" ry="1.8" transform="rotate(-160 81.5 161.0)"/>
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,175 Q 137.3,168.7 158.5,161.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="128.4" cy="172.0" rx="5.8" ry="2.3" transform="rotate(-20 128.4 172.0)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="136.8" cy="168.9" rx="5.4" ry="2.2" transform="rotate(-20 136.8 168.9)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="145.1" cy="165.9" rx="5.0" ry="2.1" transform="rotate(-20 145.1 165.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="153.5" cy="162.8" rx="4.6" ry="2.0" transform="rotate(-20 153.5 162.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="158.5" cy="161.0" rx="4.2" ry="1.8" transform="rotate(-20 158.5 161.0)"/>
+  <!-- branches at y=159 -->
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,159 Q 105.8,151.1 88.5,141.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="111.3" cy="154.2" rx="5.8" ry="2.3" transform="rotate(-151 111.3 154.2)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="102.5" cy="149.3" rx="5.4" ry="2.2" transform="rotate(-151 102.5 149.3)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="93.8" cy="144.5" rx="5.0" ry="2.1" transform="rotate(-151 93.8 144.5)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="88.5" cy="141.5" rx="4.2" ry="1.8" transform="rotate(-151 88.5 141.5)"/>
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,159 Q 134.2,151.1 151.5,141.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="128.7" cy="154.2" rx="5.8" ry="2.3" transform="rotate(-29 128.7 154.2)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="137.5" cy="149.3" rx="5.4" ry="2.2" transform="rotate(-29 137.5 149.3)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="146.2" cy="144.5" rx="5.0" ry="2.1" transform="rotate(-29 146.2 144.5)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="151.5" cy="141.5" rx="4.2" ry="1.8" transform="rotate(-29 151.5 141.5)"/>
+  <!-- branches at y=145 -->
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,145 Q 109.4,136.7 96.4,126.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="113.4" cy="139.9" rx="5.8" ry="2.3" transform="rotate(-142 113.4 139.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="106.9" cy="134.7" rx="5.4" ry="2.2" transform="rotate(-142 106.9 134.7)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="100.3" cy="129.6" rx="5.0" ry="2.1" transform="rotate(-142 100.3 129.6)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="96.4" cy="126.5" rx="4.2" ry="1.8" transform="rotate(-142 96.4 126.5)"/>
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,145 Q 130.6,136.7 143.6,126.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="126.6" cy="139.9" rx="5.8" ry="2.3" transform="rotate(-38 126.6 139.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="133.1" cy="134.7" rx="5.4" ry="2.2" transform="rotate(-38 133.1 134.7)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="139.7" cy="129.6" rx="5.0" ry="2.1" transform="rotate(-38 139.7 129.6)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="143.6" cy="126.5" rx="4.2" ry="1.8" transform="rotate(-38 143.6 126.5)"/>
+  <!-- branches at y=132 -->
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,132 Q 112.3,123.8 103.0,113.7"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="115.3" cy="126.9" rx="5.8" ry="2.3" transform="rotate(-133 115.3 126.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="110.5" cy="121.8" rx="5.4" ry="2.2" transform="rotate(-133 110.5 121.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="105.8" cy="116.8" rx="5.0" ry="2.1" transform="rotate(-133 105.8 116.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="103.0" cy="113.7" rx="4.2" ry="1.8" transform="rotate(-133 103.0 113.7)"/>
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,132 Q 127.7,123.8 137.0,113.7"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="124.7" cy="126.9" rx="5.8" ry="2.3" transform="rotate(-47 124.7 126.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="129.5" cy="121.8" rx="5.4" ry="2.2" transform="rotate(-47 129.5 121.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="134.2" cy="116.8" rx="5.0" ry="2.1" transform="rotate(-47 134.2 116.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="137.0" cy="113.7" rx="4.2" ry="1.8" transform="rotate(-47 137.0 113.7)"/>
+  <!-- branches at y=120 -->
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,120 Q 115.2,112.9 109.4,104.2"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="115.9" cy="113.9" rx="5.8" ry="2.3" transform="rotate(-124 115.9 113.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="111.8" cy="107.9" rx="5.4" ry="2.2" transform="rotate(-124 111.8 107.9)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="109.4" cy="104.2" rx="4.2" ry="1.8" transform="rotate(-124 109.4 104.2)"/>
+  <path stroke="#E4B96A" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,120 Q 124.8,112.9 130.6,104.2"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="124.1" cy="113.9" rx="5.8" ry="2.3" transform="rotate(-56 124.1 113.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="128.2" cy="107.9" rx="5.4" ry="2.2" transform="rotate(-56 128.2 107.9)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="130.6" cy="104.2" rx="4.2" ry="1.8" transform="rotate(-56 130.6 104.2)"/>
+  <!-- Crown -->
+  <path stroke="#E4B96A" stroke-width="1.1" fill="none" stroke-linecap="round" d="M 120,108 Q 117.2,99.4 113.8,89.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="117.6" cy="100.7" rx="5.8" ry="2.3" transform="rotate(-108 117.6 100.7)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="115.2" cy="93.4" rx="5.4" ry="2.2" transform="rotate(-108 115.2 93.4)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="113.8" cy="89.0" rx="4.2" ry="1.8" transform="rotate(-108 113.8 89.0)"/>
+  <path stroke="#E4B96A" stroke-width="1.1" fill="none" stroke-linecap="round" d="M 120,108 Q 120.0,98.1 120.0,86.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="120.0" cy="99.5" rx="5.8" ry="2.3" transform="rotate(-90 120.0 99.5)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="120.0" cy="91.1" rx="5.4" ry="2.2" transform="rotate(-90 120.0 91.1)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="120.0" cy="86.0" rx="4.2" ry="1.8" transform="rotate(-90 120.0 86.0)"/>
+  <path stroke="#E4B96A" stroke-width="1.1" fill="none" stroke-linecap="round" d="M 120,108 Q 122.8,99.4 126.2,89.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="122.4" cy="100.7" rx="5.8" ry="2.3" transform="rotate(-72 122.4 100.7)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="124.8" cy="93.4" rx="5.4" ry="2.2" transform="rotate(-72 124.8 93.4)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="126.2" cy="89.0" rx="4.2" ry="1.8" transform="rotate(-72 126.2 89.0)"/>
+</svg></div>
       <div class="nav-logo-text">
         Barakah Investments
         <span>Group</span>
@@ -511,9 +613,57 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-bg-pattern"></div>
+
+    <!--
+      Big Island of Hawaiʻi — all-curve organic outline, clockwise from Upolu Point.
+      Anchors from lat/lon: x=(156.059-lon)/1.253*300, y=(20.264-lat)/1.354*320
+      Upolu(42,0) · Pololu(78,14) · Waipio(112,34) · Hamakua · Hilo Bay · Cape K(300,176)
+      SE Puna · Punaluu flat(131-179,268) · Ka Lae(90,320) · Kona · Keahole(0,127) · Kawaihae(54,54) · Mahukona(36,20)
+    -->
+    <svg class="hero-island" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M 42,0
+           C 55,4 68,10 78,14
+           C 82,18 95,28 112,34
+           C 128,42 152,56 170,67
+           C 175,74 182,84 187,91
+           C 196,97 210,100 218,103
+           C 224,107 228,111 230,114
+           C 228,117 225,120 222,122
+           C 225,126 231,128 237,129
+           C 246,134 256,140 261,145
+           C 270,150 278,155 285,159
+           C 293,165 299,172 300,176
+           C 300,182 297,187 292,188
+           C 288,194 283,200 278,204
+           C 268,210 262,218 254,223
+           C 244,232 236,242 225,249
+           C 210,256 196,264 179,268
+           C 163,268 147,268 131,268
+           C 121,272 116,279 112,285
+           C 105,296 97,309 90,320
+           C 78,317 67,312 55,306
+           C 47,300 42,289 38,280
+           C 35,272 33,263 32,254
+           C 24,237 17,220 14,204
+           C 14,184 14,166 14,148
+           C 8,141 3,134 0,127
+           C 1,114 3,105 5,98
+           C 7,88 8,80 9,74
+           C 22,67 38,60 54,54
+           C 47,43 40,31 36,20
+           C 38,13 40,5 42,0 Z"
+        fill="rgba(201,151,58,0.07)"
+        stroke="rgba(201,151,58,0.45)"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+      />
+    </svg>
+
     <div class="hero-content fade-up">
       <div class="hero-badge">Halal Investing &amp; Building</div>
       <h1>Building <em>Blessed</em><br>Businesses That<br>Truly Matter</h1>
+      <p class="hero-tagline">Builder &nbsp;·&nbsp; Investor &nbsp;·&nbsp; God-Conscious</p>
       <p class="hero-sub">
         Barakah Investments Group creates and invests in halal businesses that
         differentiate through exceptional products and genuine service —
@@ -573,8 +723,8 @@
     <div class="section-label">Our Ventures</div>
     <h2>The Portfolio</h2>
     <p class="section-intro">
-      A growing collection of food and lifestyle brands in the DMV area, each built
-      around a distinct concept and a shared commitment to quality.
+      A growing collection of food and lifestyle brands, each built around a distinct
+      concept and a shared commitment to quality.
     </p>
     <div class="portfolio-grid">
 
@@ -587,11 +737,6 @@
           <span class="biz-card-tag tag-active">Active</span>
           <h3>Talkin' Tacos</h3>
           <p>A taco concept built around bold flavors, fresh ingredients, and a lively atmosphere. We believe great tacos bring people together — and we're proving it in the DMV.</p>
-          <div class="biz-detail">
-            <span class="biz-chip">🍽 Restaurant</span>
-            <span class="biz-chip">📍 DMV Area</span>
-            <span class="biz-chip">🌿 Halal</span>
-          </div>
         </div>
       </div>
 
@@ -604,11 +749,6 @@
           <span class="biz-card-tag tag-coming">Coming Soon</span>
           <h3>Scoop N Scootery</h3>
           <p>An ice cream and mobility concept combining handcrafted scoops with a fun, community-forward experience. Because why not make dessert an adventure?</p>
-          <div class="biz-detail">
-            <span class="biz-chip">🍦 Ice Cream</span>
-            <span class="biz-chip">🛵 Scooters</span>
-            <span class="biz-chip">🌿 Halal</span>
-          </div>
         </div>
       </div>
 
@@ -621,11 +761,18 @@
           <span class="biz-card-tag tag-coming">Coming Soon</span>
           <h3>Melt N Dip</h3>
           <p>A comfort food concept centered around indulgent, melt-in-your-mouth flavors with bold dipping sauces. Familiar favorites, elevated and done right.</p>
-          <div class="biz-detail">
-            <span class="biz-chip">🍴 Food Concept</span>
-            <span class="biz-chip">📍 DMV Area</span>
-            <span class="biz-chip">🌿 Halal</span>
-          </div>
+        </div>
+      </div>
+
+      <!-- Hibachi Box -->
+      <div class="biz-card fade-up">
+        <div class="biz-card-header biz-card-header-hibachi">
+          <span>🍱</span>
+        </div>
+        <div class="biz-card-body">
+          <span class="biz-card-tag tag-coming">Coming Soon</span>
+          <h3>Hibachi Box</h3>
+          <p>Fast-casual teppanyaki that delivers the full hibachi experience — grilled proteins, fried rice, noodles, and signature sauces — with real speed and consistency. Quality without the wait.</p>
         </div>
       </div>
 
@@ -716,7 +863,95 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Barakah <span>Investments Group</span></div>
+    <div class="footer-logo">
+      <svg class="footer-logo-tree" viewBox="68 80 104 135" width="22" height="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<!-- Trunk -->
+  <path stroke="#7A5C10" stroke-width="2.4" fill="none" stroke-linecap="round"
+        d="M 120,208 C 120,188 119,165 120,142 C 121,124 120,110 120,98"/>
+  <!-- branches at y=192 -->
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,192 Q 99.8,187.7 75.0,182.4"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="110.2" cy="189.9" rx="5.8" ry="2.3" transform="rotate(-168 110.2 189.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="100.4" cy="187.8" rx="5.4" ry="2.2" transform="rotate(-168 100.4 187.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="90.7" cy="185.8" rx="5.0" ry="2.1" transform="rotate(-168 90.7 185.8)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="80.9" cy="183.7" rx="4.6" ry="2.0" transform="rotate(-168 80.9 183.7)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="75.0" cy="182.4" rx="4.2" ry="1.8" transform="rotate(-168 75.0 182.4)"/>
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,192 Q 140.2,187.7 165.0,182.4"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="129.8" cy="189.9" rx="5.8" ry="2.3" transform="rotate(-12 129.8 189.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="139.6" cy="187.8" rx="5.4" ry="2.2" transform="rotate(-12 139.6 187.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="149.3" cy="185.8" rx="5.0" ry="2.1" transform="rotate(-12 149.3 185.8)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="159.1" cy="183.7" rx="4.6" ry="2.0" transform="rotate(-12 159.1 183.7)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="165.0" cy="182.4" rx="4.2" ry="1.8" transform="rotate(-12 165.0 182.4)"/>
+  <!-- branches at y=175 -->
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,175 Q 102.7,168.7 81.5,161.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="111.6" cy="172.0" rx="5.8" ry="2.3" transform="rotate(-160 111.6 172.0)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="103.2" cy="168.9" rx="5.4" ry="2.2" transform="rotate(-160 103.2 168.9)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="94.9" cy="165.9" rx="5.0" ry="2.1" transform="rotate(-160 94.9 165.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="86.5" cy="162.8" rx="4.6" ry="2.0" transform="rotate(-160 86.5 162.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="81.5" cy="161.0" rx="4.2" ry="1.8" transform="rotate(-160 81.5 161.0)"/>
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,175 Q 137.3,168.7 158.5,161.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="128.4" cy="172.0" rx="5.8" ry="2.3" transform="rotate(-20 128.4 172.0)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="136.8" cy="168.9" rx="5.4" ry="2.2" transform="rotate(-20 136.8 168.9)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="145.1" cy="165.9" rx="5.0" ry="2.1" transform="rotate(-20 145.1 165.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="153.5" cy="162.8" rx="4.6" ry="2.0" transform="rotate(-20 153.5 162.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="158.5" cy="161.0" rx="4.2" ry="1.8" transform="rotate(-20 158.5 161.0)"/>
+  <!-- branches at y=159 -->
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,159 Q 105.8,151.1 88.5,141.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="111.3" cy="154.2" rx="5.8" ry="2.3" transform="rotate(-151 111.3 154.2)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="102.5" cy="149.3" rx="5.4" ry="2.2" transform="rotate(-151 102.5 149.3)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="93.8" cy="144.5" rx="5.0" ry="2.1" transform="rotate(-151 93.8 144.5)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="88.5" cy="141.5" rx="4.2" ry="1.8" transform="rotate(-151 88.5 141.5)"/>
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,159 Q 134.2,151.1 151.5,141.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="128.7" cy="154.2" rx="5.8" ry="2.3" transform="rotate(-29 128.7 154.2)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="137.5" cy="149.3" rx="5.4" ry="2.2" transform="rotate(-29 137.5 149.3)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="146.2" cy="144.5" rx="5.0" ry="2.1" transform="rotate(-29 146.2 144.5)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="151.5" cy="141.5" rx="4.2" ry="1.8" transform="rotate(-29 151.5 141.5)"/>
+  <!-- branches at y=145 -->
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,145 Q 109.4,136.7 96.4,126.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="113.4" cy="139.9" rx="5.8" ry="2.3" transform="rotate(-142 113.4 139.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="106.9" cy="134.7" rx="5.4" ry="2.2" transform="rotate(-142 106.9 134.7)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="100.3" cy="129.6" rx="5.0" ry="2.1" transform="rotate(-142 100.3 129.6)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="96.4" cy="126.5" rx="4.2" ry="1.8" transform="rotate(-142 96.4 126.5)"/>
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,145 Q 130.6,136.7 143.6,126.5"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="126.6" cy="139.9" rx="5.8" ry="2.3" transform="rotate(-38 126.6 139.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="133.1" cy="134.7" rx="5.4" ry="2.2" transform="rotate(-38 133.1 134.7)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="139.7" cy="129.6" rx="5.0" ry="2.1" transform="rotate(-38 139.7 129.6)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="143.6" cy="126.5" rx="4.2" ry="1.8" transform="rotate(-38 143.6 126.5)"/>
+  <!-- branches at y=132 -->
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,132 Q 112.3,123.8 103.0,113.7"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="115.3" cy="126.9" rx="5.8" ry="2.3" transform="rotate(-133 115.3 126.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="110.5" cy="121.8" rx="5.4" ry="2.2" transform="rotate(-133 110.5 121.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="105.8" cy="116.8" rx="5.0" ry="2.1" transform="rotate(-133 105.8 116.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="103.0" cy="113.7" rx="4.2" ry="1.8" transform="rotate(-133 103.0 113.7)"/>
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,132 Q 127.7,123.8 137.0,113.7"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="124.7" cy="126.9" rx="5.8" ry="2.3" transform="rotate(-47 124.7 126.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="129.5" cy="121.8" rx="5.4" ry="2.2" transform="rotate(-47 129.5 121.8)"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="134.2" cy="116.8" rx="5.0" ry="2.1" transform="rotate(-47 134.2 116.8)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="137.0" cy="113.7" rx="4.2" ry="1.8" transform="rotate(-47 137.0 113.7)"/>
+  <!-- branches at y=120 -->
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,120 Q 115.2,112.9 109.4,104.2"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="115.9" cy="113.9" rx="5.8" ry="2.3" transform="rotate(-124 115.9 113.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="111.8" cy="107.9" rx="5.4" ry="2.2" transform="rotate(-124 111.8 107.9)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="109.4" cy="104.2" rx="4.2" ry="1.8" transform="rotate(-124 109.4 104.2)"/>
+  <path stroke="#7A5C10" stroke-width="1.4" fill="none" stroke-linecap="round" d="M 120,120 Q 124.8,112.9 130.6,104.2"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="124.1" cy="113.9" rx="5.8" ry="2.3" transform="rotate(-56 124.1 113.9)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="128.2" cy="107.9" rx="5.4" ry="2.2" transform="rotate(-56 128.2 107.9)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="130.6" cy="104.2" rx="4.2" ry="1.8" transform="rotate(-56 130.6 104.2)"/>
+  <!-- Crown -->
+  <path stroke="#7A5C10" stroke-width="1.1" fill="none" stroke-linecap="round" d="M 120,108 Q 117.2,99.4 113.8,89.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="117.6" cy="100.7" rx="5.8" ry="2.3" transform="rotate(-108 117.6 100.7)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="115.2" cy="93.4" rx="5.4" ry="2.2" transform="rotate(-108 115.2 93.4)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="113.8" cy="89.0" rx="4.2" ry="1.8" transform="rotate(-108 113.8 89.0)"/>
+  <path stroke="#7A5C10" stroke-width="1.1" fill="none" stroke-linecap="round" d="M 120,108 Q 120.0,98.1 120.0,86.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="120.0" cy="99.5" rx="5.8" ry="2.3" transform="rotate(-90 120.0 99.5)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="120.0" cy="91.1" rx="5.4" ry="2.2" transform="rotate(-90 120.0 91.1)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="120.0" cy="86.0" rx="4.2" ry="1.8" transform="rotate(-90 120.0 86.0)"/>
+  <path stroke="#7A5C10" stroke-width="1.1" fill="none" stroke-linecap="round" d="M 120,108 Q 122.8,99.4 126.2,89.0"/>
+  <ellipse fill="#E4B96A" opacity="0.92" cx="122.4" cy="100.7" rx="5.8" ry="2.3" transform="rotate(-72 122.4 100.7)"/>
+  <ellipse fill="#C9973A" opacity="0.92" cx="124.8" cy="93.4" rx="5.4" ry="2.2" transform="rotate(-72 124.8 93.4)"/>
+  <ellipse fill="#C9973A" opacity="0.85" cx="126.2" cy="89.0" rx="4.2" ry="1.8" transform="rotate(-72 126.2 89.0)"/>
+</svg>
+      <div class="footer-logo-wordmark">Barakah <span>Investments Group</span></div>
+    </div>
     <div class="footer-links">
       <a href="#mission">Mission</a>
       <a href="#portfolio">Portfolio</a>
